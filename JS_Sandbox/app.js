@@ -1,99 +1,33 @@
-// Log to console
-// var, let, const are all ways to declare variables
+const name = 'John';
+const age = '31';
+const job = 'Web Developer';
+const city = 'Miami';
 
-//var name = 'John Doe';
-//
-//console.log(name);
-//
-//name =  'Steve Jobs';
-//
-//console.log(name);
+// Without template string (es5)
 
-// Init var
+html = '<ul><li> Name: ' + name + '</li><li> Age: ' + age + '</li><li> Job: ' + job + '</li><li> City: ' + city + '</li></ul>';
 
-//var greeting; 
-//
-//console.log(greeting);
-//
-//greeting = 'Hello';
-//
-//console.log(greeting);
+html = '<ul>' +
+    '<li> Name: ' + name + '</li>' +
+    '<li> Age: ' + age + '</li>' +
+    '</ul>';
 
-// letters, numbers, _, $
-// Cannot start with a number
+// With template strings
 
-// Multi-word vars
-//var firstName = 'John'; // Camel case
-//var first_name = 'Sierra'; // Underscore
-//var FristName = 'Tom'; //Pascol case
+function hello(){
+    return 'hello';
+}
 
-// Using LET
+html = `
+<ul>
+<li>Name: ${name}</li>
+<li>Age: ${age}</li>
+<li>Job: ${job}</li>
+<li>City: ${city}</li>
+<li>${2 + 2}</li>
+<li>${hello()}</li>
+<li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+</ul>
+`;
 
-//let name = 'John Doe';
-//
-// Using CONST
-//
-//const name = "john";
-
-// CONST cannot be reassigned
-// Have to assign a value
-
-//const person = {
-//    name: "John",
-//    age: 30
-//}
-
-// You can change the name and age with the following code
-
-//person.name = "Sara";
-//person.age = 32;
-
-//console.log(person);
-
-//const numbers = [1,2,3,4,5];
-
-// You can add to this array by using the following code
-
-//numbers.push(6);
-
-//console.log(numbers);
-
-// You can change const values when inside of an array or object
-
-
-
-//let val;
-
-// Number to string
-
-//val = String(5);
-
-//val = String(4+4);
-
-// Convert boolean
-//val = String(true);
-
-// Date to a string
-//val = String(new Date());
-
-// Array to string
-
-//val = String([1,2,3,4,5]);
-
-// Another method to convert a variable to a string would be to use //toString()
-
-//val = (5).toString();
-
-// String to number
-//val = Number('5');
-
-// Output
-
-//console.log(val);
-//console.log(typeof val);
-
-// This console only works for strings
-//onsole.log(val.length);
-
-// this one works only with numbers
-//console.log(val.toFixed(2));
+document.body.innerHTML = html;

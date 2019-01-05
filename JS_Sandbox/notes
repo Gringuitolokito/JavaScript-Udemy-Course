@@ -1,0 +1,192 @@
+//var, let, const are all ways to declare variables
+
+var name = 'John Doe';
+
+console.log(name);
+
+name =  'Steve Jobs';
+
+console.log(name);
+
+// Init var
+
+var greeting; 
+
+console.log(greeting);
+
+greeting = 'Hello';
+
+console.log(greeting);
+
+// letters, numbers, _, $
+// Cannot start with a number
+
+// Multi-word vars
+var firstName = 'John'; // Camel case
+var first_name = 'Sierra'; // Underscore
+var FristName = 'Tom'; //Pascol case
+
+// Using LET
+
+let name = 'John Doe';
+
+//Using CONST
+
+const name = "john";
+
+// CONST cannot be reassigned
+// Have to assign a value
+
+const person = {
+    name: "John",
+    age: 30
+}
+
+// You can change the name and age with the following code
+
+person.name = "Sara";
+person.age = 32;
+console.log(person);
+------------------------------------------------------------
+
+const numbers = [1,2,3,4,5];
+
+// You can add to this array by using the following code
+
+numbers.push(6);
+
+console.log(numbers);
+
+// You can change const values when inside of an array or object
+--------------------------------------------------------------
+
+let val;
+
+// Number to string
+
+val = String(5);
+
+val = String(4+4);
+
+// Convert boolean
+val = String(true);
+
+// Date to a string
+val = String(new Date());
+
+// Array to string
+
+val = String([1,2,3,4,5]);
+
+// Another method to convert a variable to a string would be to use //toString()
+
+val = (5).toString();
+
+// String to number
+val = Number('5');
+
+// Output
+
+console.log(val);
+console.log(typeof val);
+
+// This console only works for strings
+console.log(val.length);
+
+// this one works only with numbers
+console.log(val.toFixed(2));
+--------------------------------------------------
+
+const num1 = 100;
+const num2 = 50;
+let val;
+
+// Simple math with numbers and operators
+
+val = num1 + num2;
+val = num1 - num2;
+val = num1 * num2;
+val = num1 / num2;
+val = num1 % num2;
+
+// Math Object
+
+val = Math.PI;
+val = Math.E;
+val = Math.round (2.4);
+
+console.log(val);
+---------------------------------
+
+const firstName = 'willi';
+const lastName = 'tompson';
+const age = 36;
+let val;
+
+val = firstName + lastName;
+
+// Concat
+
+val = firstName + ' ' + lastName;
+
+append
+val = 'Brad ';
+val += 'Trave';
+
+val = 'Hello my name is ' + firstName + ' and i am ' + age;
+
+// escaping
+
+val = 'that\'s awesome, I can\'t wait';
+
+// length 
+
+val = firstName.length;
+
+// concat
+
+val = firstName.concat(' ', lastName);
+
+// toUpperCase and toLowerCase
+
+val = firstName.toUpperCase();
+val = firstName.toLocaleLowerCase();
+
+
+
+console.log(val);
+------------------------------------
+
+const name = 'John';
+const age = '31';
+const job = 'Web Developer';
+const city = 'Miami';
+
+// Without template string (es5)
+
+html = '<ul><li> Name: ' + name + '</li><li> Age: ' + age + '</li><li> Job: ' + job + '</li><li> City: ' + city + '</li></ul>';
+
+html = '<ul>' +
+    '<li> Name: ' + name + '</li>' +
+    '<li> Age: ' + age + '</li>' +
+    '</ul>';
+
+// With template strings
+
+function hello(){
+    return 'hello';
+}
+
+html = `
+<ul>
+<li>Name: ${name}</li>
+<li>Age: ${age}</li>
+<li>Job: ${job}</li>
+<li>City: ${city}</li>
+<li>${2 + 2}</li>
+<li>${hello()}</li>
+<li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+</ul>
+`;
+
+document.body.innerHTML = html;
