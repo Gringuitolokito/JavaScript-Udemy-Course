@@ -250,4 +250,57 @@ console.log(val);
 
 -----------------------------------
 
+const person = {
+    firstName: 'Steve',
+    lastName: 'Smith',
+    age: 36,
+    email: 'steve@aol.com',
+    hobbies: ['music', 'sports'],
+    address: {
+        city: 'Maimi',
+        state: 'FL'
+    },
+    getBirthYear: function(){
+        return 1987 - this.age;
+    }
+    
+}
+
+let val;
+
+val = person;
+
+// Get specific value
+val = person.firstName;
+val = person['firstName'];
+val = person.hobbies[1];
+val = person.address.state;
+val = person.getBirthYear();
+
+console.log(val);
+
+----------------------------------
+
+const id = 100;
+
+// equal to
+if(id == 100){
+    console.log('CORRECT');
+} else {
+    console.log('INCORRECT');
+}
+
+// not equal to
+if(id != 101){
+    console.log('CORRECT');
+} else {
+    console.log('INCORRECT');
+}
+
+// test type - check type
+if(id === 100){
+    console.log('CORRECT');
+} else {
+    console.log('INCORRECT');
+}
 
