@@ -190,3 +190,64 @@ html = `
 `;
 
 document.body.innerHTML = html;
+
+-------------------------------------------------
+
+const numbers = [43, 56, 33, 23, 24, 36, 5];
+const numbers2 = new Array(12, 23,56,78,3);
+const fruit = ['Apple', 'Banana', 'Pear', 'Apricot'];
+const mixed = [22, 'Hello', true, undefined, null, {a:1, b:2}, new Date()];
+
+let val;
+
+// Get array length
+val = numbers.length;
+
+// Check if it is an array
+val = Array.isArray(numbers);
+
+// Get a single value
+val = numbers[3];
+val = numbers[0];
+
+// Insert into an array
+numbers[2] = 100;
+
+// Find index of value 
+val = numbers.indexOf(36);
+
+// Mutating arrays!
+// add on to array
+numbers.push(250);
+
+//add to the front of the array
+numbers.unshift(120);
+
+// take off from end
+numbers.pop();
+
+// take off from the front
+numbers.shift();
+
+//splice values
+numbers.splice(1,3);
+
+// reverse
+numbers.reverse();
+
+// sort alphabetical order
+val = fruit.sort();
+
+// find
+function under50(num){
+    return num < 50;
+}
+
+val = numbers.find(under50);
+
+console.log(numbers);
+console.log(val);
+
+-----------------------------------
+
+
