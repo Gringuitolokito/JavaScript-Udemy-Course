@@ -304,3 +304,159 @@ if(id === 100){
     console.log('INCORRECT');
 }
 
+--------------------------------------
+
+const color = 'Blue';
+
+switch (color) {
+    case 'Red':
+        console.log('Color is Red');
+        break;
+    case 'Blue':
+        console.log('Color is Blue');
+        break;
+    case 'Yellow':
+        console.log('Color is Yellow');
+        break;
+    default:
+        console.log('Color is not found');
+}
+
+let day;
+
+switch (new Date().getDay()) {
+    case 0:
+        day = 'Sunday';
+        break;
+    case 1:
+        day = 'Monday';
+        break;
+    case 2:
+        day = 'Tuesday';
+        break;
+    case 3:
+        day = 'Wednesday';
+        break;
+    case 4:
+        day = 'Thursday';
+        break;
+    case 5:
+        day = 'Friday';
+        break;
+    case 6:
+        day = 'Saturday';
+        break;
+}
+
+console.log(`Today is ${day}`);
+
+-----------------------------------
+
+// Function declaration
+// set defaults if name is not specified in output
+function greet(fn = 'John', ln = 'Doe'){
+    
+    return 'Hello ' + fn + ' ' + ln;
+}
+
+console.log(greet());
+
+// Function expression
+const square = function(x = 3){
+    return x*x;
+}
+
+console.log(square());
+
+// Imemidiate invocable function expression
+(function(name){
+    console.log('Hello ' + name)
+    
+})('Brad');
+
+// property method
+const todo = {
+    add: function(){
+        console.log('Add todo..')
+    },
+    edit: function(id){
+        console.log(`Edit todo ${id}`);
+    }
+}
+todo.add();
+todo.edit(22);
+
+-------------------------------------
+
+// for loop
+
+for (let i = 0; i < 10; i++) {
+    //console.log(i);
+    if (i === 2) {
+        console.log('2 is my favorite number');
+        continue;
+    }
+
+    if (i === 5) {
+        break;
+    }
+    console.log('Number' + i);
+}
+
+// while loop
+
+let i = 0;
+
+while (i < 10) {
+    console.log('Number ' + i);
+    i++;
+}
+
+// do while
+
+let dw = 100;
+
+do {
+    console.log(dw);
+    dw++;
+}
+
+while (dw < 10);
+
+// Looping through an array
+
+// declare array
+const cars = ['Toyota', 'Ford', 'Dodge', 'Honda'];
+
+// for loop through the array
+for (let x = 0; x < cars.length; x++) {
+    console.log(cars[x])
+}
+
+// For each loop 
+// recommended!
+
+cars.forEach(function(car){
+    console.log(car);
+});
+
+
+----------------------------
+
+// get height and width of screen
+
+let val;
+
+// outer
+val = window.outerHeight;
+val = window.outerWidth;
+
+// inner
+val = window.innerHeight;
+val = window.innerWidth;
+
+console.log(val);
+
+------------------------------
+
+
